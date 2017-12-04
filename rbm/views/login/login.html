@@ -1,0 +1,40 @@
+<div class="notifies" notifybar></div>
+<div class="container">
+    <div class="row justify-content-center" ng-show="showHideSignInSignUp">
+        <div class="col-md-10">
+            <div class="card-group mb-0">
+                <div class="card p-4 m-t-100">
+                    <div class="card-block">
+                        <p class="text-muted text-center" style="font-size: 50px;font-weight: 100;">Good Morning, Sai!</p>
+                        <p class="text-center text-muted" id="loginError" style=";">Please Select a Site to begin</p>
+                        <form name="loginForm" novalidate ng-submit="login(user);">
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                   <select style="width:100%" class="form-control">
+                                       <option >Select a site</option>
+                                        <option>SITE-121324-1245145</option>
+                                         <option>SITE-121324-1245145</option>
+                                         <option>SITE-121324-1245145</option>
+                                   </select>
+                                </div>
+                                <!-- <span class="help-block" ng-show=" submitted && loginForm.userid.$invalid && loginForm.userid.$touched">Enter user id</span> -->
+                   
+                            </div>
+                           
+                            <div class="row" >
+                                <div class="col-5"  style="margin-left: 30%">
+                                    <button type="submit"  ui-sref="kridashboard" class="btn btn-primary btn-block px-4">Proceed</button>
+                                </div>
+                                <!-- <div class="col-7">
+                                    <button type="button" class="btn btn-link p-x-0" ng-click="requestAccess();showHideSignInSignUp = false">Request Access</button>
+                                </div> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>

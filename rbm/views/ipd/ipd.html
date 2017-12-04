@@ -1,0 +1,154 @@
+<div class="container-fluid" ng-controller="ipdCtrl">
+  <div class="row getdown">
+    <div class="offset-3 col-md-9">
+     <div class="card">
+      <div class="card-header headingsize">
+        <span>Summary</span>
+      </div>
+      <div class="card-block">
+        <div class="row">
+          <div class="extramoveright">
+            <h4 style="text-align: left;"><i class="fa fa-flag iconcolor iconsizeincrease"></i></h4>
+            <p class="greycolor">IPDs in Last 3 Months</p>
+            <div  class="extrafontsize">
+              <p>{{responsejson.summarydata.ipd_last_3}}  </p>
+            </div>
+          </div>
+          <div class="extramoveright">
+            <h4 style="text-align: left;"><i class="fa fa-exclamation-circle iconcolor iconsizeincrease"></i></h4>
+            <p class="greycolor" style="width: 150px">Total IPDs</p>
+            <div class="extrafontsize">
+              <p>{{responsejson.summarydata.total_ipds}}   </p>
+            </div>
+          </div>
+            <div class="extramoveright">
+            <h4 style="text-align: left;"><i class="fa fa-exclamation-circle iconcolor iconsizeincrease"></i></h4>
+            <p class="greycolor" style="width: 150px">PEEDs In Last 3 months</p>
+            <div class="extrafontsize">
+              <p>{{responsejson.summarydata.peeds_last_3}}   </p>
+            </div>
+          </div>
+          <div class="extramoveright">
+            <h4 style="text-align: left;"><i class="fa fa-exclamation-circle iconcolor iconsizeincrease"></i></h4>
+            <p class="greycolor">Total PEEDs</p>
+            <div  class="extrafontsize">
+              <p>{{responsejson.summarydata.total_peeds}}   </p>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+<div class="row">
+    <div class="col-md-6">
+    <div class="card">
+      <div class="card-header headingsize">
+        <span>3 Month IPD Rolling Trend</span>
+      </div>
+      <div class="card-block">
+     <div id="idprolling_id"></div>
+      </div>
+    </div>
+  </div>
+   <div class="col-md-6">
+    <div class="card">
+      <div class="card-header headingsize">
+        <span>IPD By Category</span>
+      </div>
+      <div class="card-block">
+        <div id="cloumndiv"></div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+     <div class="col-md-12 mb-4">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link  active" data-toggle="tab" href="#home3" role="tab"><i class="icon-book-open"></i> Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile3" role="tab"><i class="fa fa-building-o"></i> Quality & Compliance</a>
+          </li>
+
+        </ul>
+
+        <div class="tab-content" style="height: 250px">
+          <div class="tab-pane active" id="home3" role="tabpanel">
+            <h6>SITE DETAILS</h6>
+            <div class="row " style="border-bottom: 1px solid #848484">
+              <div class="float-left moveright"><p class="greycolor">Site Number</p><h6 style="    margin-top: -20%;">{{responsejson.sitedata.sitenumber}}</h6></div>
+              <div class="float-left moveright"><p class="greycolor">PI Name</p><h6 style="    margin-top: -16%;">{{responsejson.sitedata.pi_name}}</h6></div>
+              <div class="float-left moveright"><p class="greycolor">Country</p><h6 style="    margin-top: -16%;">{{responsejson.sitedata.country}}</h6></div>
+              <div class="float-left moveright"><p class="greycolor">Site Visit Schema</p><h6 style="    margin-top: -16%;">{{responsejson.sitedata.site_visit_schema}}</h6></div>
+
+            </div>
+
+            <div class="row">
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="icon-calendar iconsizeincrease"></i></h4>
+                <p class="greycolor">Next Monitoring Visit</p>
+                <div  class="resultfont">
+                <p>{{responsejson.sitedata.next_visit}} </p>
+                </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="icon-calendar iconsizeincrease"></i></h4>
+                <p class="greycolor">Last Monitoring Visit</p>
+                <div  class="resultfont">
+                <p>{{responsejson.sitedata.last_visit}}</p>
+              </div>
+            </div>
+              
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="icon-notebook iconsizeincrease"></i></h4>
+                <p class="greycolor">Outstanding pages</p>
+                <div  class="resultfont">
+                <p>{{responsejson.sitedata.outstanding_pages}}</p>
+              </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="fa fa-user iconsizeincrease"></i></h4>
+                <p class="greycolor">Enrolled Subjects</p>
+                <div  class="resultfont">
+                <p>{{responsejson.sitedata.enrolled_subjects}}</p>
+                </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="fa fa-user iconsizeincrease"></i></h4>
+                <p class="greycolor">Active Subjects</p>
+                <div  class="resultfont">
+                <p>{{responsejson.sitedata.active_subjects}}</p>
+              </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="fa fa-question-circle iconsizeincrease"></i></h4>
+                <p class="greycolor">Outstanding Queries</p>
+                <div class="resultfont">
+                <p>{{responsejson.sitedata.outstanding_queries}}</p>
+              </div>
+              </div>
+
+
+
+
+
+
+            </div>
+          </div>  
+          <div class="tab-pane " id="profile3" role="tabpanel" >
+           <h6>STUDY</h6>
+           <div style="display: inline;">
+            <div class="float-left"><p>Site Number</p><h6>24123</h6></div>
+            <div class="float-left"><p>PI Name</p><h6>Dr. John Doe</h6></div>
+            <div class="float-left"><p>Country</p><h6>United States</h6></div>
+            <div class="float-left"><p>Site Visit Schema</p><h6>13-Week</h6></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+  </div>
+  
+</div>

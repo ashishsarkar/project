@@ -1,0 +1,72 @@
+ 
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>RBM</title>
+    <!-- Icons -->
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/angular-notify-flat.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
+    <!-- Main styles for this application -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/xeditable.css" rel="stylesheet">
+    <link href="css/vis.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-layout/src/ui-layout.css" />
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden" style="background: #fff">
+    <div class="cloak" ng-if="cloak"></div>
+    <script type="text/ng-template" id="top-nav.html">
+        <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">☰</button>
+        <a class="navbar-brand" ui-sref="home"><img src="img/logo-amgen.png" style="height: 78%;"></a>
+        <div class="float-left" style="margin-top: 11px;margin-right: 9px;">
+           <p style="font-weight: 500;color: #fff">Data as of <span  style="font-weight: 400;"> November 27,2017</span>  </p>
+       </div>
+       <!-- <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a> -->
+       
+   </script>
+
+   <header class="app-header navbar" ng-if="location.path() !== '/login'" ng-include src="'top-nav.html'"></header>
+   <!-- <header class="app-header navbar" ng-include="'views/common/top-nav.html'" ng-if="location.path() !== '/login'"></header> -->
+   <div ui-view></div>
+   <!-- Bootstrap and necessary plugins -->
+   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script type="text/javascript" src="js/slim-scroll.js"></script>
+   <script src="bower_components/tether/dist/js/tether.min.js"></script>
+   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="bower_components/pace/pace.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/angularjs/1.3.9/angular.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/angular.ui-router/0.3.2/angular-ui-router.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/angular.bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/angular.xeditable/0.7.1/js/xeditable.min.js"></script>
+   <script src="js/angular-notify.min.js"></script>
+   <script src="js/ng-slimScroll.js"></script>
+   <script src="js/vis.min.js"></script>
+   <script src="js/angular-drag-and-drop-lists.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/angularjs/1.3.9/angular-mocks.js"></script>
+   <!-- <script type="text/javascript" src="bower_components/angular-ui-layout/index.js"></script> -->
+   <script type="text/javascript" src="bower_components/angular-ui-layout/src/ui-layout.js"></script>
+   <script src="http://maps.google.com/maps/api/js?key=AIzaSyAkp4aUFjgGeiAwEdwI8vi3w7q4JmfrQes"></script>
+   <script type="text/javascript" src="js/plotly-latest.min.js"></script>
+   <script src="https://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+   <script src="app.js"></script>
+   <script src="views/login/loginCtrl.js"></script>
+   <script src="views/kridashboard/kridashboardCtrl.js"></script>
+   <script src="views/ipd/ipdCtrl.js"></script>
+   <script src="views/subjects/subjectsCtrl.js"></script>
+   <script src="js/dirPagination.js"></script>
+
+</body> 
+
+</html>

@@ -1,0 +1,199 @@
+<div class="notifies" notifybar></div>
+<style type="text/css">
+
+tr:nth-child(even) {background: #fff!important}
+tr:nth-child(odd) {background: #a6d8f52b!important}
+.vis-timeline {
+
+
+  font-size: 12pt;
+  background: #fff;
+}
+
+.vis-item {
+  border-color: #84c6ed;
+  background-color: #ffffff;
+  font-size: 15pt;
+
+}
+
+.vis-item,
+.vis-item.vis-line {
+  border-width: 3px;
+}
+
+.vis-item.vis-dot {
+  border-width: 6px;
+  border-radius: 8px;
+}
+
+.vis-item.vis-selected {
+  border-color: green;
+  background-color: lightgreen;
+}
+
+.vis-time-axis .vis-text {
+  color: #2162a5;
+  padding-left: 10px;
+}
+
+.vis-time-axis .vis-text.vis-major {
+  font-weight: bold;
+
+}
+
+.vis-time-axis .vis-grid.vis-minor {
+  border-width: 1px;
+  border-color: #2162a5;
+}
+
+.vis-time-axis .vis-grid.vis-major {
+  border-width: 1px;
+  border-color: #2162a5;
+}
+</style>
+
+<div class="container-fluid">
+  <div class="row getdown">
+    <div class="offset-3 col-md-9">
+      <div class="card-header headingsize">
+        <span>  KRI Summary</span>
+      </div>
+      <div class="bs-component" >
+        <table class="table table-bordered table-striped table-condensed">
+          <thead>
+            <tr>
+            </tr>
+            <th > </th>
+            <th >11/3 </th>
+            <th >21/5 </th>
+            <th >22/6 </th>
+            <th >23/6 </th>
+            <th >24/6 </th>
+            <th >25/7 </th>
+            <th >26/7 </th>
+            <th >27/7 </th>
+            <th >28/7 </th>
+            <th >29/7 </th>
+            <th >Current</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="dashboard in dashboarddata" >
+              <td ui-sref={{dashboard.view}} class="tablerowdata"> {{dashboard.name}}</td>
+              <td>{{dashboard.a}}</td>
+              <td>{{dashboard.b}}</td>
+              <td>{{dashboard.c}}</td>
+              <td>{{dashboard.d}}</td>
+              <td>{{dashboard.e}}</td>
+              <td>{{dashboard.f}}</td>
+              <td>{{dashboard.g}}</td>
+              <td>{{dashboard.h}}</td>
+              <td>{{dashboard.i}}</td>
+              <td>{{dashboard.j}}</td>
+              <td>{{dashboard.current}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="card">
+        <div class="card-header headingsize">
+          <span><i class="fa fa-clock-o"></i> Site Intervention</span>
+        </div>
+        <div class="card-block">
+
+
+          <div id="visualization"></div>
+
+        </div>
+      </div>
+
+      <div class="col-md-12 mb-4">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link  active" data-toggle="tab" href="#home3" role="tab"><i class="icon-book-open"></i> STUDY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile3" role="tab"><i class="fa fa-building-o"></i> SITE</a>
+          </li>
+
+        </ul>
+
+        <div class="tab-content" style="height: 250px">
+          <div class="tab-pane active" id="home3" role="tabpanel">
+            <h6>SITE DETAILS</h6>
+            <div class="row " style="border-bottom: 1px solid #848484">
+              <div class="float-left moveright"><p class="greycolor">Site Number</p><h6>24123</h6></div>
+              <div class="float-left moveright"><p class="greycolor">PI Name</p><h6>Dr. John Doe</h6></div>
+              <div class="float-left moveright"><p class="greycolor">Country</p><h6>United States</h6></div>
+              <div class="float-left moveright"><p class="greycolor">Site Visit Schema</p><h6>13-Week</h6></div>
+
+            </div>
+
+            <div class="row">
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="icon-calendar iconsizeincrease"></i></h4>
+                <p class="greycolor">Next Monitoring Visit</p>
+                <div  class="resultfont">
+                <p>08/12/2017</p>
+                </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="icon-calendar iconsizeincrease"></i></h4>
+                <p class="greycolor">Last Monitoring Visit</p>
+                <div  class="resultfont">
+                <p>05/20/2017</p>
+              </div>
+            </div>
+              
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="icon-notebook iconsizeincrease"></i></h4>
+                <p class="greycolor">Outstanding pages</p>
+                <div  class="resultfont">
+                <p>195</p>
+              </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="fa fa-user iconsizeincrease"></i></h4>
+                <p class="greycolor">Enrolled Subjects</p>
+                <div  class="resultfont">
+                <p>155</p>
+                </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="fa fa-user iconsizeincrease"></i></h4>
+                <p class="greycolor">Active Subjects</p>
+                <div  class="resultfont">
+                <p>105</p>
+              </div>
+              </div>
+              <div class="moveright">
+                <h4 style="text-align: left;"><i class="fa fa-question-circle iconsizeincrease"></i></h4>
+                <p class="greycolor">Outstanding Queries</p>
+                <div class="resultfont">
+                <p>255</p>
+              </div>
+              </div>
+
+
+
+
+
+
+            </div>
+          </div>  
+          <div class="tab-pane " id="profile3" role="tabpanel" >
+           <h6>STUDY</h6>
+           <div style="display: inline;">
+            <div class="float-left"><p>Site Number</p><h6>24123</h6></div>
+            <div class="float-left"><p>PI Name</p><h6>Dr. John Doe</h6></div>
+            <div class="float-left"><p>Country</p><h6>United States</h6></div>
+            <div class="float-left"><p>Site Visit Schema</p><h6>13-Week</h6></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
